@@ -1,0 +1,93 @@
+.homepage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./assets/background.jpg'); /* atau './assets/background.jpg' jika file di folder assets */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.game-logo {
+  position: absolute;
+  top: 80px;    /* Atur sesuai kebutuhan */
+  left: 38%;
+  transform: translateX(-50%);
+  width: 400px; /* Atur sesuai kebutuhan */ 
+  animation: pulse 2s infinite;
+  z-index: 2;
+}
+
+@keyframes pulse {
+  0% { transform: translateX(-5%) scale(1);}
+  50% { transform: translateX(-5%) scale(1.15);}
+  100% { transform: translateX(-5%) scale(1);}
+}
+
+.play-icon-btn {
+  position: absolute;
+  width: 150px;
+  height: 140px;
+  top: 355px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 2;
+  transition: 
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.play-icon-btn:hover,
+.play-icon-btn:focus {
+  transform: translateX(-50%) scale(1.15);
+}
+
+.play-icon-btn:active {
+  transform: translateX(-50%) scale(0.95);
+}
+
+.video-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.intro-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.close-img-btn {
+  position: absolute;
+  top: 20px;
+  left: 13px;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  z-index: 20;
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s;
+}
+
+.close-img-btn:hover,
+.close-img-btn:focus {
+  transform: scale(1.18);
+}
+
+.close-img-btn:active {
+  transform: scale(0.95);
+}

@@ -1,0 +1,320 @@
+.dragndrop-bg {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.dragndrop-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+/* Drop area kiri */
+.drop-area-img {
+  position: absolute;
+  top: 10px;
+  left: -600px;
+  width: 340px;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.border-drop-img {
+  position: absolute;
+  top: 60px;
+  left: 480px;
+  width: 1100px;
+  height: 600px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.drop-title {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border-radius: 12px 12px 0 0;
+  padding: 6px 24px 4px 24px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #222;
+  z-index: 2;
+  border: 3px solid #1856a7;
+  border-bottom: none;
+  pointer-events: none; /* Tambahkan ini jika masih ada drop-title */
+}
+
+/* Drop list di dalam border drop */
+.drop-list {
+  position: absolute;
+  top: 180px;
+  left: 845px;
+  height: 500px;
+  width: 550px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.drop-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-left: 8px;
+}
+
+.drop-circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #bdbdbd;
+  border: 2px solid #888;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  transition: all 0.3s ease;
+}
+
+.drop-circle:hover {
+  border-color: #666;
+  background-color: #a0a0a0;
+}
+
+/* Drop area untuk rambu petunjuk (berbentuk kotak) */
+.drop-square {
+  width: 90px;
+  height: 90px;
+  border-radius: 8px; /* Membuat sudut sedikit rounded untuk kotak */
+  background: #bdbdbd;
+  border: 2px solid #888;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  transition: all 0.3s ease;
+}
+
+.drop-square:hover {
+  border-color: #666;
+  background-color: #a0a0a0;
+}
+
+.drop-label {
+  font-size: 17px;
+  color: #222;
+  font-weight: 500;
+  line-height: 1.2;
+  min-width: 140px;
+  margin-left: 8px;
+}
+
+/* Drag area kanan */
+.drag-area-img {
+  position: absolute;
+  top: 250px;
+  left: 730px;
+  width: 320px;
+  height: 320px;
+  background: rgba(125, 125, 125, 0.35);
+  border-radius: 32px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drag-rambu-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 32px 32px;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-items: center;
+}
+
+.drag-rambu-img {
+  width: 110px;
+  height: 110px;
+  cursor: grab;
+  user-select: none;
+  transition: transform 0.2s;
+  background: none;
+  position: relative;
+  z-index: 10;
+}
+.drag-rambu-img:active {
+  transform: scale(1.08);
+}
+
+/* Timer Bar */
+.quis-timer-bar-container {
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  margin-top: 650px;
+  transform: translateX(-50%);
+  width: 420px;
+  max-width: 90vw;
+  z-index: 10;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quis-timer-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -40px;
+  margin-left: 5px;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  z-index: 11;
+  text-shadow: 0 1px 2px #fff, 0 0px 8px #fff8;
+}
+
+/* --- Modal backdrop --- */
+.modal-backdrop {
+  position: fixed;
+  z-index: 99;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- Modal popup --- */
+.modal-popup {
+  background: #fff;
+  border-radius: 24px;
+  border: 6px solid #7be36a;
+  box-shadow: 0 8px 32px #0003;
+  padding: 32px 32px 24px 32px;
+  min-width: 340px;
+  max-width: 90vw;
+  text-align: center;
+  position: relative;
+  animation: fallDown 0.6s cubic-bezier(0.7, 1.7, 0.5, 1) both;
+  overflow: visible;
+}
+.modal-correct {
+  border-color: #7be36a;
+}
+.modal-wrong {
+  border-color: #f44336;
+}
+
+.modal-emoji-row {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.modal-title {
+  color: #43b000;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.modal-wrong .modal-title {
+  color: #f44336;
+}
+
+.modal-svg {
+  margin: 16px auto 12px auto;
+}
+
+.modal-desc {
+  color: #222;
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+@keyframes fallDown {
+  0% {
+    transform: translateY(-120px) scale(0.7);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(16px) scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Confetti fall down */
+.fall-screen-group {
+  pointer-events: none;
+  position: fixed;
+  z-index: 10020;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.fall-confetti {
+  position: absolute;
+  top: -30px;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  opacity: 0.85;
+  animation: fallDown 1.7s cubic-bezier(0.23, 1.12, 0.62, 1.01) forwards;
+}
+@keyframes fallDown {
+  0% {
+    top: -30px;
+    opacity: 0.85;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    top: 100vh;
+    opacity: 0.2;
+  }
+}
+
+/* Modal animasi jatuh */
+.fall-down {
+  animation: fallDownModal 0.7s cubic-bezier(0.23, 1.12, 0.62, 1.01);
+}
+@keyframes fallDownModal {
+  0% {
+    transform: translateY(-80px) scale(0.7);
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(8px) scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}

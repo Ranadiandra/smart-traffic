@@ -1,0 +1,116 @@
+.study-container {
+  min-height: 100vh;
+  min-width: 100vw;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: url('./assets/bg.png') center center / cover no-repeat fixed;
+  z-index: 0;
+  overflow-y: auto; /* Tambahkan scrollbar vertikal */
+}
+
+.study-title {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 0 4px 24px #0003;
+  letter-spacing: 1px;
+  margin: 32px auto 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+.rambu-idcard-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 32px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.rambu-idcard {
+  border: none;
+  border-radius: 18px;
+  width: 190px;
+  background: linear-gradient(135deg, #e3f0ff 60%, #f8faff 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 14px 20px 14px;
+  box-shadow: 0 6px 24px #00498422, 0 1.5px 8px #0001;
+  transition:
+    transform 0.22s cubic-bezier(.4,2,.6,1),
+    box-shadow 0.18s;
+  cursor: pointer;
+  position: relative;
+  overflow: visible;
+}
+
+.rambu-idcard:hover {
+  transform: scale(1.09) translateY(-6px) rotate(-1deg);
+  box-shadow: 0 12px 36px #00498433, 0 2px 12px #0002;
+  z-index: 3;
+}
+
+.rambu-img-box {
+  border: 3px solid #fff;
+  border-radius: 12px;
+  width: 130px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #eaf6ff 80%, #fff 100%);
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px #00498411;
+  transition: border-color 0.2s;
+}
+
+.rambu-idcard:hover .rambu-img-box {
+  border-color: #004984;
+}
+
+.rambu-img {
+  max-width: 100px;
+  max-height: 80px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px #00498422);
+  transition: filter 0.2s;
+}
+
+.rambu-label-box {
+  border: none;
+  border-radius: 8px;
+  width: 140px;
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #004984;
+  margin-top: 10px;
+  padding: 0 8px;
+  box-sizing: border-box;
+  box-shadow: 0 1px 6px #00498422;
+}
+
+.rambu-label {
+  font-size: 1.05rem;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  word-break: break-word;
+  white-space: normal;
+  width: 100%;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 8px #0002;
+}

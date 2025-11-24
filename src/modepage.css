@@ -1,0 +1,65 @@
+.gamepage-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.gamepage-logo {
+  top: 110px;
+  width: 370px;
+  max-width: 90vw;
+  display: block;
+  animation: pulse 2s infinite;
+  z-index: 2;
+}
+
+@keyframes pulse {
+  0% { transform: translateX(-6%) scale(1);}
+  50% { transform: translateX(-6%) scale(1.15);}
+  100% { transform: translateX(-6%) scale(1);}
+}
+
+.gamepage-content {
+  color: #fff;
+  text-align: center;
+  background: rgba(0,0,0,0.3);
+  padding: 32px 48px;
+  border-radius: 18px;
+  margin-top: 40px;
+}
+
+.option-img {
+  margin-top: 25%;
+  width: 230px;
+  height: 230px;
+  border-radius: 18px;
+  cursor: pointer;
+  object-fit: contain;
+  margin-bottom: 16px;
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+}
+
+.option-img:hover {
+  transform: scale(1.12);
+}
+
+.option-img study-img {
+  margin-top: 0;
+  width: 180px;
+  height: 180px;
+}
+
+.option-img gametime-img {
+  margin-top: 0;
+  width: 180px;
+  height: 180px;
+}

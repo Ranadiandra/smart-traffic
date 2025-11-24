@@ -1,0 +1,129 @@
+.gamepage-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.gamepage-logo {
+  margin-top: 100px;
+  width: 320px;
+  max-width: 80vw;
+  display: block;
+  animation: pulse 2s infinite;
+  z-index: 2;
+}
+
+@keyframes pulse {
+  0% { transform: translateX(-6%) scale(1);}
+  50% { transform: translateX(-6%) scale(1.15);}
+  100% { transform: translateX(-6%) scale(1);}
+}
+
+.gamepage-btn-row {
+  position: relative;
+  width: 700px;
+  height: 200px;
+  margin: 60px auto 0 auto;
+}
+
+.gamepage-btn-col {
+  position: absolute;
+}
+
+/* Atur posisi dan ukuran masing-masing button */
+.quis-btn {
+  width: 120px;
+  height: 120px;
+  left: 0px;
+  top: 20px;
+}
+.dragndrop-btn {
+  width: 120px;
+  height: 120px;
+  left: 290px;
+  top: 20px;
+}
+.find-btn {
+  width: 120px;
+  height: 120px;
+  left: 580px;
+  top: 20px;
+}
+
+.option-img {
+  border-radius: 18px;
+  cursor: pointer;
+  object-fit: contain;
+  margin-bottom: 0;
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.option-img:hover {
+  transform: scale(1.14) rotate(-2deg);
+}
+
+/* Champions Modal */
+.champions-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.champions-popup {
+  background: linear-gradient(135deg, #fffbe6 80%, #ffe066 100%);
+  border: 4px solid #ffe066;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px #0003;
+  padding: 36px 36px 28px 36px;
+  min-width: 320px;
+  max-width: 95vw;
+  text-align: center;
+  animation: fadeIn 0.5s;
+}
+.champions-title {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #d4af37;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 12px #fff8;
+}
+.champions-desc {
+  font-size: 1.2rem;
+  color: #bfa100;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+.champions-unlock {
+  color: #ffd700;
+  font-weight: bold;
+  font-size: 1.1em;
+  display: block;
+  margin-top: 6px;
+}
+.champions-trophy {
+  margin: 18px auto 10px auto;
+  cursor: pointer;
+  transition: transform 0.18s;
+  display: inline-block;
+}
+.champions-trophy:hover {
+  transform: scale(1.08) rotate(-3deg);
+  filter: brightness(1.15);
+}
+.champions-close-text {
+  color: #bfa100;
+  font-size: 1.05rem;
+  margin-top: 8px;
+  font-style: italic;
+}
