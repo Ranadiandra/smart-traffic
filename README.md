@@ -15,4 +15,6 @@ Built using **React and JavaScript**, this project features multiple learning mo
 
 This project was created as part of my personal portfolio, with the aim of promoting road safety awareness through digital learning.
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f7268464-6394-46b9-92ef-4bfab178dadc" />
+<img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/f7268464-6394-46b9-92ef-4bfab178dadc" />
+<img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/d04344a2-ed72-4a4d-8039-b61c024cb7c5" />
+<img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/9478ca09-f39a-459a-a87a-1c8ff98f9dee" />
