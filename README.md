@@ -1,6 +1,7 @@
 # smart-traffic
 Smart Traffic is an interactive educational game designed to help users especially children learn about traffic rules and road safety in a fun and engaging way.
 Built using **React and JavaScript**, this project features multiple learning modes, quizzes, animations, and an intuitive user interface that makes learning enjoyable.
+
 **Key Features**
 - Learning Mode – Explore various traffic signs with visuals and descriptions.
 - Quiz Mode – Test your knowledge through timed quizzes with multiple-choice questions.
